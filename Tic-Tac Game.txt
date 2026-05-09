@@ -1,0 +1,60 @@
+# Create the board with empty spaces
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+# Print the empty board
+print(board[0], "|", board[1], "|", board[2])
+print("--+---+--")
+print(board[3], "|", board[4], "|", board[5])
+print("--+---+--")
+print(board[6], "|", board[7], "|", board[8])
+
+# Player 1 input
+p1 = int(input("Player 1 (X), enter position (1-9): ")) -1
+board[p1] = "X"
+
+
+# Print board after Player 1 move
+print(board[0], "|", board[1], "|", board[2])
+print("--+---+--")
+print(board[3], "|", board[4], "|", board[5])
+print("--+---+--")
+print(board[6], "|", board[7], "|", board[8])
+
+# Player 2 input
+p2 = int(input("Player 2 (O), enter position (1-9): ")) -1
+board[p2] = "O"
+
+
+
+# Print board after Player 2 move
+print(board[0], "|", board[1], "|", board[2])
+print("--+---+--")
+print(board[3], "|", board[4], "|", board[5])
+print("--+---+--")
+print(board[6], "|", board[7], "|", board[8])
+
+# Check winner using if-else only
+if board[0] == board[1] == board[2] == "X":
+    print("Player 1 wins")
+elif board[3] == board[4] == board[5] == "X":
+    print("Player 1 wins")
+elif board[6] == board[7] == board[8] == "X":
+    print("Player 1 wins")
+elif board[0] == board[3] == board[6] == "X":
+    print("Player 1 wins")
+elif board[1] == board[4] == board[7] == "X":
+    print("Player 1 wins")
+elif board[2] == board[5] == board[8] == "X":
+    print("Player 1 wins")
+elif board[0] == board[4] == board[8] == "X":
+    print("Player 1 wins")
+elif board[2] == board[4] == board[6] == "X":
+    print("Player 1 wins")
+elif board[0] == board[1] == board[2] == "O":
+    print("Player 2 wins")
+elif board[3] == board[4] == board[5] == "O":
+    print("Player 2 wins")
+elif board[6] == board[7] == board[8] == "O":
+    print("Player 2 wins")
+else:
+    print("No winner yet")
